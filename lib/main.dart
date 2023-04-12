@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:thuisgemaaktexamen/pages/recipe_overview_pages.dart';
 import 'package:thuisgemaaktexamen/pages/navigatiebar.dart';
 
 void main() {

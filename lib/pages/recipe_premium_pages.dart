@@ -14,12 +14,12 @@ class PremiumPage extends StatelessWidget {
         child: Center(
           child: Card(
             elevation: 10,
-            color: Color.fromARGB(131, 130, 124, 124),
+            color: Color(0xffBD900A),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30.0),
             ),
             child: Padding(
-              padding: const EdgeInsets.all(130.0),
+              padding: const EdgeInsets.all(70),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -36,24 +36,51 @@ class PremiumPage extends StatelessWidget {
                   const SizedBox(
                     height: 2,
                   ),
-                  
-                  const Text("Premium"),
-                  const Text("15 / maand"),
-                  const SizedBox(
-                    height: 10,
+
+                  const Text(
+                    "Premium",
+                    style: TextStyle(
+                      fontSize: 30,
+                      color: Colors.white,
+                    ),
                   ),
-                  const Text("✓ alle ingredienten"),
+                  const Text(
+                    "5 euro / maand",
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.white,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  const Text(
+                    "✓ alle ingredienten",
+                    style: TextStyle(
+                      fontSize: 25,
+                      color: Colors.white,
+                    ),
+                  ),
                   Divider(
                     color: Colors.white,
                     thickness: 2,
                   ),
-                  const Text("✓ geen advertentie"),
+                  const Text(
+                    "✓ geen advertentie",
+                    style: TextStyle(
+                      fontSize: 25,
+                      color: Colors.white,
+                    ),
+                  ),
                   const SizedBox(
                     height: 100,
                   ),
                   TextButton(
                     onPressed: () {},
-                    child: const Text("Koop 5 euro"),
+                    child: const Text(
+                      "Koop 5 euro",
+                      style: TextStyle(fontSize: 30, color: Colors.white),
+                    ),
                   ),
                 ],
               ),

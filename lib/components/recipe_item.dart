@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:thuisgemaaktexamen/pages/recipe_details_pages.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
-class RecipeItem extends StatelessWidget{
+class RecipeItem extends StatelessWidget {
   final String id;
   final String title;
+  final String time;
   final String imageUrl;
   final String ingredients;
   final String bereiding;
@@ -13,6 +12,7 @@ class RecipeItem extends StatelessWidget{
   RecipeItem({
     required this.id,
     required this.title,
+    required this.time,
     required this.imageUrl,
     required this.ingredients,
     required this.bereiding,
@@ -32,7 +32,13 @@ class RecipeItem extends StatelessWidget{
         onTap: () {
           Navigator.of(context).push(
             MaterialPageRoute(
-              builder: ((context) => RecipeDetailPage(title: title, imageUrl: imageUrl, ingredients: ingredients, bereiding: bereiding,)),
+              builder: ((context) => RecipeDetailPage(
+                    title: title,
+                    time: time,
+                    imageUrl: imageUrl,
+                    ingredients: ingredients,
+                    bereiding: bereiding,
+                  )),
             ),
           );
         },

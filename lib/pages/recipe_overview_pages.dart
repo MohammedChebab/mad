@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:thuisgemaaktexamen/models/recipe.dart';
 import 'package:thuisgemaaktexamen/components/recipe_item.dart';
-import 'package:thuisgemaaktexamen/pages/navigatiebar.dart';
 
 class RecipeOverviewPage extends StatefulWidget {
   const RecipeOverviewPage({super.key});
@@ -15,6 +14,7 @@ class _RecipeOverviewPageState extends State<RecipeOverviewPage> {
     Recipe(
       id: 'p1',
       title: 'Linzensoep',
+      time: '40 minuten',
       ingredients: '• 200 gr wortel \n'
           '• 300 gr gedroogde rode linzen \n'
           '• 400 ml tomatenblokjes \n'
@@ -37,6 +37,7 @@ class _RecipeOverviewPageState extends State<RecipeOverviewPage> {
     Recipe(
       id: 'p2',
       title: 'Boerencake',
+      time: '80 minuten',
       ingredients: '• 250 gram boter (ongezouten margarine of roomboter)\n'
           '• 4 eieren \n'
           '• 250 gram zelfrijzend bakmeel (of bloem met theelepel bakpoeder gemengd) \n'
@@ -59,14 +60,16 @@ class _RecipeOverviewPageState extends State<RecipeOverviewPage> {
     Recipe(
       id: 'p3',
       title: 'Hamburger',
-      ingredients: 'Premium nodig',
-      bereiding: 'Premium nodig',
+      time: 'PREMIUM NODIG',
+      ingredients: 'PREMIUM NODIG',
+      bereiding: 'PREMIUM NODIG',
       imageUrl:
           'https://www.foodandfriends.nl/app/uploads/2020/12/Humburger-Kookschool-klassiek.jpg',
     ),
     Recipe(
       id: 'p4',
       title: 'Pannenkoek',
+      time: '20 minuten',
       ingredients: '• 2 eieren \n'
           '• 250 gr bloem \n'
           '• 500 ml melk \n'
@@ -81,22 +84,25 @@ class _RecipeOverviewPageState extends State<RecipeOverviewPage> {
     Recipe(
       id: 'p5',
       title: 'Kapsalon',
-      ingredients: 'Premium nodig',
-      bereiding: 'Premium nodig',
+      time: 'PREMIUM NODIG',
+      ingredients: 'PREMIUM NODIG',
+      bereiding: 'PREMIUM NODIG',
       imageUrl:
           'https://static-images.jumbo.com/product_images/Recipe_505932-01_560x560.jpg',
     ),
     Recipe(
       id: 'p6',
       title: 'perenmuffins',
-      ingredients: 'Premium nodig',
-      bereiding: 'Premium nodig',
+      time: 'PREMIUM NODIG',
+      ingredients: 'PREMIUM NODIG',
+      bereiding: 'PREMIUM NODIG',
       imageUrl:
           'https://www.leukerecepten.nl/wp-content/uploads/2023/02/peren-muffins-b.jpg',
     ),
     Recipe(
       id: 'p7',
       title: 'Pasta carbonara',
+      time: '25 minuten',
       ingredients: '• 400 gr spaghetti \n'
           '• 200 gr gerookte spekblokjes of reepjes \n'
           '• verse peterselie \n'
@@ -116,8 +122,9 @@ class _RecipeOverviewPageState extends State<RecipeOverviewPage> {
     Recipe(
       id: 'p8',
       title: 'Appeltaart',
-      ingredients: 'Premium nodig',
-      bereiding: 'Premium nodig',
+      time: 'PREMIUM NODIG',
+      ingredients: 'PREMIUM NODIG',
+      bereiding: 'PREMIUM NODIG',
       imageUrl:
           'https://images.ctfassets.net/brcxfsm84vq2/7eBkjOINljB22V9Tx2qSno/5a05656241fe2083dbd1cf20668cd862/appeltaart_met_extra_veel_deeg',
     ),
@@ -143,6 +150,7 @@ class _RecipeOverviewPageState extends State<RecipeOverviewPage> {
           itemBuilder: (context, i) => RecipeItem(
             id: loadedRecipes[i].id,
             title: loadedRecipes[i].title,
+            time: loadedRecipes[i].time,
             imageUrl: loadedRecipes[i].imageUrl,
             ingredients: loadedRecipes[i].ingredients,
             bereiding: loadedRecipes[i].bereiding,

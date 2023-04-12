@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:thuisgemaaktexamen/pages/recipe_premium_pages.dart';
 import 'package:thuisgemaaktexamen/pages/recipe_overview_pages.dart';
+import 'package:thuisgemaaktexamen/pages/recipe_details_pages.dart';
 
 class Navigationbar extends StatefulWidget {
   const Navigationbar({super.key});
@@ -8,7 +9,6 @@ class Navigationbar extends StatefulWidget {
   @override
   State<Navigationbar> createState() => _NavigationbarState();
 }
-
 
 class _NavigationbarState extends State<Navigationbar> {
   int _selectedindex = 0;
@@ -20,10 +20,15 @@ class _NavigationbarState extends State<Navigationbar> {
   }
 
   final List<Widget> _pages = [
-    RecipeOverviewPage(),
-    PremiumPage(),
+    const RecipeOverviewPage(),
+    const PremiumPage(),
+    // const RecipeDetailPage(
+    //     title: 'title',
+    //     imageUrl: 'imageUrl',
+    //     ingredients: 'ingredients',
+    //     bereiding: 'bereiding'),
   ];
- 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,8 +38,9 @@ class _NavigationbarState extends State<Navigationbar> {
         onTap: _navigateBottomBar,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.lightbulb_outline), label: 'Premium'),
-       ],
+          BottomNavigationBarItem(
+              icon: Icon(Icons.lightbulb_outline), label: 'Premium'),
+        ],
       ),
     );
   }
