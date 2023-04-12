@@ -55,7 +55,7 @@ class PremiumPage extends StatelessWidget {
                     height: 30,
                   ),
                   const Text(
-                    "✓ alle ingredienten",
+                    "✓ meer recepten",
                     style: TextStyle(
                       fontSize: 25,
                       color: Colors.white,
